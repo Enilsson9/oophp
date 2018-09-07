@@ -16,73 +16,73 @@ $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
 <head>
     <meta charset="utf-8">
     <title><?= $title ?></title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 <?php if (isset($favicon)) : ?>
     <link rel="icon" href="<?= $favicon ?>">
 <?php endif; ?>
 
-<?php if (isset($stylesheets)) : ?>
-    <?php foreach ($stylesheets as $stylesheet) : ?>
-        <link rel="stylesheet" type="text/css" href="<?= asset($stylesheet) ?>">
-    <?php endforeach; ?>
-<?php endif; ?>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+<?php if (isset($stylesheets)) : ?>
+<?php foreach ($stylesheets as $stylesheet) : ?>
+    <link rel="stylesheet" type="text/css" href="<?= asset($stylesheet) ?>">
+<?php endforeach; ?>
+<?php endif; ?>
 </head>
 <body>
 
-<!-- header -->
-<?php if (regionHasContent("header")) : ?>
-<div class="outer-wrap outer-wrap-header">
-    <div class="inner-wrap inner-wrap-header">
-        <div class="row">
-            <div class="wrap-header">
-                <?php renderRegion("header") ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
 
 <!-- navbar -->
 <?php if (regionHasContent("navbar")) : ?>
-<div class="outer-wrap outer-wrap-navbar">
-    <div class="inner-wrap inner-wrap-navbar">
-        <div class="row">
-            <div class="wrap-navbar">
-                <?php renderRegion("navbar") ?>
-            </div>
-        </div>
-    </div>
-</div>
+<?php renderRegion("navbar") ?>
+
+
 <?php endif; ?>
 
 <!-- main -->
 <?php if (regionHasContent("main")) : ?>
-<div class="outer-wrap outer-wrap-main">
-    <div class="inner-wrap inner-wrap-main">
-        <div class="row">
-            <main class="wrap-main">
-                <?php renderRegion("main") ?>
-            </main>
-        </div>
-    </div>
-</div>
+<main role="main" class="container text-center">
+    <?php renderRegion("main") ?>
+</main>
 <?php endif; ?>
 
 <!-- footer -->
 <?php if (regionHasContent("footer")) : ?>
-<div class="outer-wrap outer-wrap-footer">
-    <div class="inner-wrap inner-wrap-footer">
-        <div class="row">
-            <div class="wrap-footer">
-                <?php renderRegion("footer") ?>
-            </div>
-        </div>
+<footer class="page-footer font-small blue pt-4">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+        <?php renderRegion("footer") ?>
     </div>
-</div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a target="blank" href="https://edwardnilsson.se/"> edwardnilsson.se</a>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php endif; ?>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <?php if (isset($stylesheets)) : ?>
     <?php foreach ($javascripts as $javascript) : ?>
     <script async src="<?= asset($javascript) ?>"></script>

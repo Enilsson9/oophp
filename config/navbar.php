@@ -4,7 +4,7 @@
  */
 return [
     [
-        "text" => "Hem",
+        "text" => "Home",
         "url" => "",
         "title" => "Första sidan, börja här.",
     ],

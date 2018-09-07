@@ -1,6 +1,5 @@
 /.bin
 /build
 /vendor
-/hyper-guide
 memory::
 composer.lock

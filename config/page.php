@@ -16,10 +16,10 @@ return [
             "baseTitle" => " | oophp",
             "favicon" => "favicon.ico",
             "stylesheets" => [
-                "css/style.css",
+                "css/style.css"
             ],
             "javascripts" => [
-                "js/main.js",
+                "js/main.js"
             ],
         ],
     ],

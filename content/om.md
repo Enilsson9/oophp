@@ -1,18 +1,13 @@
 ---
 ---
-Om
-=========================
+<br><br>
+<img src="img/bth.png" alt="BTH logo" class="img-fluid">
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
+<h1 class="mt-5">About</h1>
+The primary focus of this website is to:
 
-Denna webbplatsen är en del av kursen [XXX](https://dbwebb.se/kurser/XXX). Uppdatera så att länken går till kursens hemsida på dwebb.se.
+* To be used in teaching the [dbwebb course oophp](http://dbwebb.se/oophp).
 
-Några egna kloka ord om kursen?
+This site is produced by [Edward Nilsson](https://github.com/Enilsson9) (enilsson9@hotmail.com).
 
-En fin och representativ bild för kursen, enligt ditt egna val.
-
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
-
-Länka till [dbwebb kursrepot på GitHub](https://github.com/dbwebbse/XXX).
-
-Länka till [ditt eget repo för me/redovisa på GitHub](https://github.com/XXX/XXX).
+[Check repo on Github](https://github.com/Enilsson9/oophp)
