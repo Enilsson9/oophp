@@ -33,6 +33,7 @@ $title = ($title ?? "No title") . ($baseTitle ?? " | No base title defined");
     <link rel="stylesheet" type="text/css" href="<?= asset($stylesheet) ?>">
 <?php endforeach; ?>
 <?php endif; ?>
+
 </head>
 <body>
 
