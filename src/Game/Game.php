@@ -16,7 +16,10 @@ class Game
     public $player2;
     private $player1Dices;
     private $player2Dices;
+    private $player1DicesFake;
+    private $player2DicesFake;
     private $disables;
+    private $counter;
 
     /**
      * Constructor to initiate the dicehand with a number of dices.
@@ -28,8 +31,11 @@ class Game
         $this->$player1        = $player1;
         $this->$player2        = $player2;
         $this->player1Dices    = [];
-        $this->player2Dices    = [];
+        $this->player2Dices        = [];
+        $this->player1DicesFake    = [];
+        $this->player2DicesFake    = [];
         $this->disables        = ["", ""];
+        $this->counter    = 0;
     }
 
 
@@ -40,10 +46,41 @@ class Game
      */
     public function roll1()
     {
-        for ($i=0; $i < 6; $i++) {
-            $this->player1Dices[] = rand(1, 6);
+        // start game
+        $this->disable(1);
+
+        //roll this->round
+        for ($i=0; $i < 3; $i++) {
+            $this->round[$i] = rand(1, 6);
         }
+
+        //add this->round to html
+        for ($i=0; $i < 3; $i++) {
+            $this->player1Dices[] = $this->round[$i];
+        }
+
+        //disable button
+        if (in_array(1, $this->round)) {
+            $this->disable(0);
+        }
+
+        //if one found do not add to sum
+        if (in_array(1, $this->round)) {
+            for ($i=0; $i < 3; $i++) {
+                $this->round[$i] = 0;
+            }
+        }
+
+        //add 0 to new this->round
+        for ($i=0; $i < 3; $i++) {
+            $this->player1DicesFake[] = $this->round[$i];
+        }
+
+        $this->player1Dices[] = "<br>";
+
+
     }
+
 
     /**
      * Roll all dices save their value.
@@ -52,9 +89,47 @@ class Game
      */
     public function roll2()
     {
-        for ($i=0; $i < 6; $i++) {
-            $this->player2Dices[] = rand(1, 6);
+        // start game
+        $this->disable(0);
+
+        //roll this->round
+        for ($i=0; $i < 3; $i++) {
+            $this->round[$i] = rand(1, 6);
         }
+
+        //add this->round to html
+        for ($i=0; $i < 3; $i++) {
+            $this->player2Dices[] = $this->round[$i];
+        }
+
+        //disable button
+        if (in_array(1, $this->round)) {
+            $this->disable(1);
+        } else {
+            $this->counter++;
+        }
+
+        //if one found do not add to sum
+        if (in_array(1, $this->round)) {
+            for ($i=0; $i < 3; $i++) {
+                $this->round[$i] = 0;
+            }
+        }
+
+        //add 0 to new this->round
+        for ($i=0; $i < 3; $i++) {
+            $this->player2DicesFake[] = $this->round[$i];
+        }
+
+        $this->player2Dices[] = "<br>";
+
+
+        //give turn after two rolls
+        if ($this->counter === 2) {
+            $this->disable(1);
+            $this->counter = 0;
+        }
+
     }
 
     /**
@@ -76,7 +151,11 @@ class Game
      */
     public function getResults($index)
     {
-        $results = [array_sum($this->player1Dices), array_sum($this->player2Dices)];
+        $results = [array_sum($this->player1DicesFake), array_sum($this->player2DicesFake)];
+
+        if ($results[$index] >= 100) {
+            return "GAME OVER";
+        }
         return $results[$index];
     }
 
@@ -89,7 +168,17 @@ class Game
     public function disable($index)
     {
         $this->disables[$index] = "disabled";
+        //enable the other one
+        switch ($index) {
+            case 0:
+                $this->disables[$index + 1] = "";
+                break;
+            case 1:
+                $this->disables[$index - 1] = "";
+                break;
+        }
     }
+
 
     /**
      * Get the sum of all dices.

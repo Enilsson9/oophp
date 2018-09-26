@@ -20,7 +20,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll1();
         $res = count($game->getDices(0));
-        $exp = 6;
+        $exp = 3;
         $this->assertEquals($exp, $res);
     }
 
@@ -37,7 +37,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll1();
         $res = count($game->getDices(0));
-        $exp = 6;
+        $exp = 3;
         $this->assertEquals($exp, $res);
     }
 
@@ -54,7 +54,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll2();
         $res = count($game->getDices(1));
-        $exp = 6;
+        $exp = 3;
         $this->assertEquals($exp, $res);
     }
 
@@ -69,7 +69,7 @@ class GameCreateObjectTest extends TestCase
         $this->assertInstanceOf("\Edni\Game\Game", $game);
 
         $game->disable(0);
-        $res = $game->getDisabled(0);;
+        $res = $game->getDisabled(0);
         $exp = "disabled";
         $this->assertEquals($exp, $res);
     }
@@ -85,10 +85,8 @@ class GameCreateObjectTest extends TestCase
         $this->assertInstanceOf("\Edni\Game\Game", $game);
 
         $game->disable(1);
-        $res = $game->getDisabled(1);;
+        $res = $game->getDisabled(1);
         $exp = "disabled";
         $this->assertEquals($exp, $res);
     }
-
-
 }
