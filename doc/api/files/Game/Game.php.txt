@@ -207,3 +207,4 @@ class Game
         return $this->disables[$index];
     }
 }
+

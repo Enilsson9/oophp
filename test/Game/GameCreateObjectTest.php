@@ -20,7 +20,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll1();
         $res = count($game->getDices(0));
-        $exp = 3;
+        $exp = 4;
         $this->assertEquals($exp, $res);
     }
 
@@ -37,7 +37,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll1();
         $res = count($game->getDices(0));
-        $exp = 3;
+        $exp = 4;
         $this->assertEquals($exp, $res);
     }
 
@@ -54,7 +54,7 @@ class GameCreateObjectTest extends TestCase
 
         $game->roll2();
         $res = count($game->getDices(1));
-        $exp = 3;
+        $exp = 4;
         $this->assertEquals($exp, $res);
     }
 
