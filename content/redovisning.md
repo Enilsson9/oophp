@@ -78,7 +78,17 @@
     </div>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Trait och interface är ett smidigt sätt att använda en sorts arv på PHP. Det tar lite tid innan man skiljer extends, use, trait, interface och sådana nya begrepp. Men efter att ha jobbat med dem på guiden känns det mycket bättre att kunna “ärva” olika klasser.
+        <br><br>
+        Intelligensen till datorn är enkel men effektiv. Det finns endast två villkor där datorn kommer att sluta rulla. Den första är om “player” har mindre poäng äv vad datorn har och den andra är om player har flera ettor än vad datorn har. I spelet handlar det att sluta rulla när det har gått för bra, därför valde jag att sluta rulla så ofta när motståndaren har mindre chans. Om datorn har mindre poäng kommer den att chansa mycket mer.
+        <br><br>
+        Ramverkets klasser och struktur är trevligt. Dokumentationen på README.md filerna hjälpte enormt. Koden i routern blev mindre på vissa delar och lite längre på andra. När man gör en "if isset" förväntar man sig en boolean, men ingen funktion i klassen gör det. Fick lägga till en !is_null ganska ofta och det kunde man fixa in i ramverket i stället.
+        <br><br>
+        Make test fungerar fortfarande inte lokalt. Det har gått något fel på min Ubuntu installation men det går fortfarande att testa med phpunit --configuration .phpunit.xml. Jag gissar att felet ligger endast hos mig med make test.
+        <br><br>
+        Kodtäckningen blev rätt så bra under "Lines". Över 80% på alla klasser. Däremot under "Classes and traits" lyckades inte jag att få något på några klasser. Det är nog p.g.a jag testar endast med assertEquals och assertContains. Det finns mycket man kan testa med phpUnit.
+        <br><br>
+        Min TIL är att Anax är lite trevligare än vad jag hade upplevt i andra kurser. När man känner igen katalogerna osv känns det att min workflow är lite snabbare än vanligt. Jag måste också läsa mer om phpunit och fixa felet med Make test (ska installera om Ubuntu och labbmiljön).
       </div>
     </div>
   </div>

@@ -18,7 +18,6 @@ class HistogramTraitCreateObject extends TestCase
         $game = new \Edni\Game\DiceHistogram();
         $this->assertInstanceOf("\Edni\Game\DiceHistogram", $game);
 
-        $serie = [1, 2, 3];
         $res = $game->printHistogram(1, 6);
         $exp = '<li>';
         $this->assertContains($exp, $res);

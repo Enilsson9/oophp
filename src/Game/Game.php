@@ -131,7 +131,7 @@ class Game
         $player1 = array_count_values($this->player1DicesHisto);
         $player2 = array_count_values($this->player2DicesHisto);
 
-        //check 1s on histogram
+        //check ones (1) on histogram
         if (isset($player1[1]) > isset($player2[1])) {
             $this->disable(1);
         }
