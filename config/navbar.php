@@ -43,4 +43,9 @@ return [
         "url" => "tarningsspel",
         "title" => "Anax test page for routes.",
     ],
+    [
+        "text" => "Movie",
+        "url" => "movie",
+        "title" => "Show movies from database",
+    ]
 ];

@@ -102,7 +102,15 @@
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Övningen visade ett smidigt sätt att kunna hantera routes, sql och vyer. Lätt att ha koll på routern med en switch-sats. Dessutom gillade jag att vi använde både databasen från studentservern och en lokal databas beroende på $_SERVER variabeln. 
+        <br><br>
+        Att överföra koden in i ramverket var inga problem i början. Med hjälp av rsync fick vi en riktigt bra bas att stöta på. Däremot, mitt största problem var CRUD uppgiften. Jag tyckte att det var konstigt att alla andra routes fungerade utan problem. 
+        <br><br>
+        Efter flera timmar upptäckte jag att instruktionerna visade hur man integrerar en route med index.php men det var endast med GET. Man måste använda både GET och POST i uppgiften och fick ändra routern till any(["GET", "POST"]). Det hade varit bättre om det stod så på exemplet tycker jag.
+        <br><br>
+        Min slutprodukt är endast en snyggare tabell och objekt. Jag har stylat dem med Bootstrap och tänkte inte mycket på UX delen. Fokuserade mest på att den tekniska delen skulle fungera utan problem. Jag är medveten att det går att göra mycket mer användarvänligt, men huvudsaken är att allt finns in i ramverket.
+        <br><br>
+        Min TIL är att lita på mig själv. Jag trodde att det var min egen kod som var fel på CRUD uppgiftern. Felsökte allt möjligt och litade för mycket på ramverket. Man ska alltså kolla hur man använder ramverket. Det är svårt att veta vart felet ligger när man endast får en 404 error. Jag upptäckte felet när jag började läsa dokumentationen till Anax på Github.
       </div>
     </div>
   </div>

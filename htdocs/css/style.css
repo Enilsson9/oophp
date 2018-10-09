@@ -5,6 +5,11 @@ html {
     min-height: 100%;
 }
 
+img.thumb {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 footer {
     max-width: 100%;
     min-height: 10em;
