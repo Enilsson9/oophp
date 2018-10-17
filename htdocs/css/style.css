@@ -5,6 +5,14 @@ html {
     min-height: 100%;
 }
 
+textarea {
+    width: 400px;
+}
+
+textarea {
+    height: 200px;
+}
+
 img.thumb {
     max-width: 100px;
     max-height: 100px;

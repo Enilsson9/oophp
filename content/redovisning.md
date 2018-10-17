@@ -102,9 +102,9 @@
     </div>
     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
       <div class="card-body">
-        Övningen visade ett smidigt sätt att kunna hantera routes, sql och vyer. Lätt att ha koll på routern med en switch-sats. Dessutom gillade jag att vi använde både databasen från studentservern och en lokal databas beroende på $_SERVER variabeln. 
+        Övningen visade ett smidigt sätt att kunna hantera routes, sql och vyer. Lätt att ha koll på routern med en switch-sats. Dessutom gillade jag att vi använde både databasen från studentservern och en lokal databas beroende på $_SERVER variabeln.
         <br><br>
-        Att överföra koden in i ramverket var inga problem i början. Med hjälp av rsync fick vi en riktigt bra bas att stöta på. Däremot, mitt största problem var CRUD uppgiften. Jag tyckte att det var konstigt att alla andra routes fungerade utan problem. 
+        Att överföra koden in i ramverket var inga problem i början. Med hjälp av rsync fick vi en riktigt bra bas att stöta på. Däremot, mitt största problem var CRUD uppgiften. Jag tyckte att det var konstigt att alla andra routes fungerade utan problem.
         <br><br>
         Efter flera timmar upptäckte jag att instruktionerna visade hur man integrerar en route med index.php men det var endast med GET. Man måste använda både GET och POST i uppgiften och fick ändra routern till any(["GET", "POST"]). Det hade varit bättre om det stod så på exemplet tycker jag.
         <br><br>
@@ -124,7 +124,17 @@
     </div>
     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        Att jobba med klassen för filtrering gick riktigt bra. Lyckades använda parse som ett API till klassen utan problem endast med en foreach loop. Dessutom märkte jag ett fel på makeClickable funktionen som jag nämnde i Gitter chatten. Det var lustigt att ingen märkte det förut. Jag är också stolt över min testsida som är enkel men effektiv för att kolla alla steg av filter klassen.
+        <br><br>
+        Min lösning av webbsidor med innehåll i databasen var en vanlig switch-sats in i routern. Jag tycker att det är smidigare att organisera mina routes på det sättet än klasser. Jag hade ett fel på edit-vyn p.g.a parametrarna lästes inte korrekt. Jag fick skriva om koden och sen gick det bra att spara artiklar på databasen utan problem (även med tomma värden).
+        <br><br>
+        Jag ändrade filter fälten till en checkbok. Eftersom parse funktionen jag skapade tidigare tar in texten och en array med filters, tyckte jag att checkbox kunde väl skicka en array med de valda filterna. Dessutom används nl2br i stället för htmlentities på bloggen för att koden skall se ut som HTML.
+        <br><br>
+        Generellt känner jag att min redovisa-kod är okej. Jag kunde ha skrivit mindre kod på mina routes på movie och content uppgiften, men jag gillar att använda en switch-sats när det gäller många routes. Filen function.php känns lite också som att det går att skriva om till en klass.
+        <br><br>
+        Ramverket hjälpte att organisera bättre min kod. Det kan lätt bli mycket kod när man har flera klasser, vyer, routers, sql osv. Men jag är faktiskt nöjd med min me/redovisa och tyckte att jag lyckades integrera Bootstrap rätt så bra på alla mina undersidor.
+        <br><br>
+        Min TIL är att våga skriva om andras kod. Jag är alltid lite nervös när jag börjar leka runt med exempelkoden, men det är ju det bästa sättet att lära sig. När jag läste artikeln tyckte jag att det var logiskt. Men man förstår koden till 100% när man börjar få ett par felmeddelade. Man blir tvungen att förstå hur den andra personen tänker och man löser alla felmeddelande så småningom.
       </div>
     </div>
   </div>

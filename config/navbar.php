@@ -47,5 +47,15 @@ return [
         "text" => "Movie",
         "url" => "movie",
         "title" => "Show movies from database",
+    ],
+    [
+        "text" => "Textfilter",
+        "url" => "textfilter",
+        "title" => "Text filtering",
+    ],
+    [
+        "text" => "Content",
+        "url" => "content",
+        "title" => "CRUD",
     ]
 ];
